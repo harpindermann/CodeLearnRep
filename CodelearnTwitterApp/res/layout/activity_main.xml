@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.codelearntwitterapp.MainActivity$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_twitter" 
+        android:textSize="28sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/background_dark"
+        />
+
+    <LinearLayout
+        android:id="@+id/uname_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:text="@string/lbl_username" />
+
+        <EditText
+            android:id="@+id/fld_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="13sp"
+            android:hint="@string/lbl_enter_username" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uname_block"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="@string/lbl_password" />
+
+        <EditText
+            android:id="@+id/fld_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:layout_gravity="center_vertical"
+            android:hint="@string/lbl_enter_password" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/lbl_login"
+        android:layout_below="@id/password_block"
+        android:onClick="loginClick"
+    />
+   
+
+</RelativeLayout>
